@@ -24,7 +24,8 @@
     },
     "require": {
         "league/fractal": "^0.19.2",
-        "spatie/fractalistic": "^2.9"
+        "spatie/fractalistic": "^2.9",
+        "illuminate/container": "^8.51"
     },
     "scripts": {
         "check": "vendor/bin/phpcs src/",
