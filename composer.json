@@ -1,0 +1,36 @@
+{
+    "name": "rewake/switchboard",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Rewake\\Switchboard\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rewake\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Richard Komatz",
+            "email": "r.komatz@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "vimeo/psalm": "^4.8",
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    },
+    "require": {
+        "league/fractal": "^0.19.2",
+        "spatie/fractalistic": "^2.9"
+    },
+    "scripts": {
+        "check": "vendor/bin/phpcs src/",
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --testdox --colors=always",
+        "test:coverage": "vendor/bin/phpunit --coverage-html build/coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    }
+}
