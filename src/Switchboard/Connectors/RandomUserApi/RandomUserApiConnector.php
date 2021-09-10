@@ -2,7 +2,6 @@
 
 namespace Rewake\Switchboard\Connectors\RandomUserApi;
 
-use GuzzleHttp\Client;
 use Illuminate\Support\Collection;
 use Rewake\Switchboard\AbstractConnector;
 use Rewake\Switchboard\ConnectorInterface;
