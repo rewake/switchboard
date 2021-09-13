@@ -2,12 +2,10 @@ name: CI Process for Develop Branch
 
 on:
   push:
-    branches:
-      - develop
+    branches: [ develop ]
 
   pull_request:
-    branches:
-      - develop
+    branches: [ develop ]
 
 jobs:
   build:
@@ -35,4 +33,4 @@ jobs:
         run: composer format src
 
       - name: Run PHPUnit Tests
-        run composer run-script test tests
+        run: composer run-script test tests
