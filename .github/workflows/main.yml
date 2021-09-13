@@ -32,5 +32,8 @@ jobs:
       - name: Check Code Formatting
         run: vendor/bin/php-cs-fixer fix --allow-risky=no --dry-run --stop-on-violation src
 
+      - name: Run Psalm
+        run: composer run-script psalm
+
       - name: Run PHPUnit Tests
         run: composer run-script test tests
