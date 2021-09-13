@@ -22,6 +22,6 @@ class RandomUserApiConnector extends AbstractConnector implements ConnectorInter
 
         // TODO: array casting is to satisfy psalm, for now, but we "should" refactor later...
         // ...since this is just an example it's not a huge deal really
-        return $this->collect((array)json_decode($result, true));
+        return $this->collect(json_decode($result, true));
     }
 }
