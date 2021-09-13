@@ -2,6 +2,7 @@
 
 namespace Rewake\Switchboard\Connectors\RandomUserApi;
 
+use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Collection;
 use Rewake\Switchboard\AbstractConnector;
 use Rewake\Switchboard\ConnectorInterface;
@@ -11,9 +12,16 @@ class RandomUserApiConnector extends AbstractConnector implements ConnectorInter
 {
     use GuzzleTrait;
 
+    /**
+     * @throws GuzzleException
+     */
     public function load(): Collection
     {
+        /** @var string $result */
         $result = $this->client->get('https://randomuser.me/api/?results=50')->getBody();
-        return $this->collect(json_decode($result, true));
+
+        // TODO: array casting is to satisfy psalm, for now, but we "should" refactor later...
+        // ...since this is just an example it's not a huge deal really
+        return $this->collect((array)json_decode($result, true));
     }
 }

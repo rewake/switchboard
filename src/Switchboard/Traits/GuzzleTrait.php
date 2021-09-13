@@ -6,6 +6,7 @@ use GuzzleHttp\Client;
 
 trait GuzzleTrait
 {
+    /** @var Client $client */
     protected $client;
 
     public function __construct()
