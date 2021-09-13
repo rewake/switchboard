@@ -1,11 +1,11 @@
-name: "CI: Develop"
+name: "CI: MAIN"
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ main ]
 
   pull_request:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
   build:
