@@ -22,7 +22,8 @@
     "require-dev": {
         "vimeo/psalm": "^4.8",
         "phpunit/phpunit": "^9.5",
-        "friendsofphp/php-cs-fixer": "^3.0"
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpro/grumphp": "^1.4"
     },
     "require": {
         "php": ">=7.1.3",
