@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Rewake\Switchboard;
-
 
 class Switchboard
 {
@@ -18,11 +16,10 @@ class Switchboard
     public static function connect($connector): self
     {
         if (is_string($connector)) {
-
-            $connector = new $connector;
+            $connector = new $connector();
         }
 
-        return (new self)->setSource($connector);
+        return (new self())->setSource($connector);
     }
 
     /**

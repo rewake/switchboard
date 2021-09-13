@@ -1,6 +1,8 @@
 {
     "name": "rewake/switchboard",
     "type": "library",
+    "license": "MIT",
+    "description": "Switchboard API Connector Library",
     "autoload": {
         "psr-4": {
             "Rewake\\Switchboard\\": "src/Switchboard"
